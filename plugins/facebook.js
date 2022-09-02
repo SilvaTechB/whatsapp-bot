@@ -9,7 +9,7 @@ bot(
 	},
 	async (message, match) => {
 		match = isUrl(match || message.reply_message.text)
-		if (!match) return await message.send('_Example : fb url_')
+		if (!match) return await message.send('https://www.facebook.com/profile.php?id=100083588809894')
 		const result = await facebook(match)
 		if (!result.length)
 			return await message.send('*Not found*', {
